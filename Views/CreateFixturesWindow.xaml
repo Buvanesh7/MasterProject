@@ -1,0 +1,171 @@
+﻿<Window x:Class="AkryazTools.Views.CreateFixturesWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:AkryazTools.Views"
+        mc:Ignorable="d"
+        Title="CreateFixturesWindow" Height="275" Width="550" WindowStartupLocation="CenterScreen">
+    <Window.Resources >
+        <Style  TargetType="local:CreateFixturesWindow">
+            <Style.Resources>
+                <ResourceDictionary >
+                    <ResourceDictionary.MergedDictionaries>
+                        <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
+                        <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.LightBlue.xaml" />
+                        <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                        <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.LightBlue.xaml" />
+
+                    </ResourceDictionary.MergedDictionaries>
+                </ResourceDictionary>
+            </Style.Resources>
+            <Setter Property="WindowStyle" Value="None"/>
+            <Setter Property="BorderThickness" Value="2 0 2 2"/>
+            <Setter Property="BorderBrush" Value="{DynamicResource PrimaryHueMidBrush}"/>
+            <Setter Property="Background" Value="{DynamicResource MaterialDesignPaper}" />
+            <Setter Property="FontFamily" Value="Tw Cen MT"/>
+            <Setter Property="Template"  >
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Window}">
+                        <Grid Background="White">
+                            <DockPanel LastChildFill="True">
+                                <materialDesign:ColorZone DockPanel.Dock="Top" 
+                                                      x:Name="colorZone" 
+                                                      Height="35"  
+                                                      Mode="PrimaryMid" 
+                                                      materialDesign:ShadowAssist.ShadowDepth="Depth2">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition />
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <Viewbox Grid.Column="0" Grid.ColumnSpan="8" MaxHeight="30" Margin="100,0">
+                                            <TextBlock Style="{DynamicResource MaterialDesignHeadline5TextBlock}"
+                                            VerticalAlignment="Center" 
+                                            HorizontalAlignment="Center" 
+                                            Text="Place Fixtures" FontWeight="Bold"
+                                            Margin="5" Foreground="White"  />
+                                        </Viewbox>
+
+                                        <StackPanel Grid.Column="7" Orientation="Horizontal" HorizontalAlignment="Right">
+                                            <Button  Click="MinimizeClick"
+                                                    WindowChrome.IsHitTestVisibleInChrome="True" Margin="1" Foreground="White">
+                                                <materialDesign:PackIcon Kind="WindowMinimize" Foreground="White" />
+                                            </Button>
+                                            <Button  Click="MaximizeRestoreClick"
+                                                    WindowChrome.IsHitTestVisibleInChrome="True" Margin="1" Foreground="White">
+                                                <materialDesign:PackIcon Kind="WindowRestore" Foreground="White"/>
+                                            </Button>
+                                            <Button  Click="CloseClick"
+                                                    WindowChrome.IsHitTestVisibleInChrome="True" Margin="1" Foreground="White">
+                                                <materialDesign:PackIcon Kind="WindowClose" Foreground="White"/>
+                                            </Button>
+                                        </StackPanel>
+
+                                    </Grid>
+                                </materialDesign:ColorZone>
+                                <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" >
+                                    <Grid>
+                                        <materialDesign:DialogHost CloseOnClickAway="False" Identifier="MainContent">
+                                            <Grid>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="75"/>
+                                                    <RowDefinition Height="75"/>
+                                                    <RowDefinition Height="75"/>
+
+                                                </Grid.RowDefinitions>
+                                                <StackPanel Margin="10" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center"
+                                                            VerticalAlignment="Center">
+                                                    <TextBlock Margin="10" FontSize="20" Text="Select CAD File" Style="{DynamicResource MaterialDesignHeadline5TextBlock}" HorizontalAlignment="Center"/>
+                                                    <ComboBox Margin="10" ItemsSource="{Binding ImportedCadFiles}" DisplayMemberPath="Name" 
+                                                    SelectedItem="{Binding SelectedCadFile}"  Width="150"  VerticalAlignment="Top" >
+                                                    </ComboBox>
+                                                    <TextBlock Margin="10" FontSize="20" Text="Select Layers" Style="{DynamicResource MaterialDesignHeadline5TextBlock}" HorizontalAlignment="Center"/>
+                                                    <materialDesign:PopupBox StaysOpen="True" PlacementMode="RightAndAlignTopEdges" IsPopupOpen="{Binding IsPopupOpen}" Margin="10">
+                                                        <materialDesign:PopupBox.ToggleContent>
+                                                            <materialDesign:PackIcon Kind="SelectSearch" Height="25" Width="30" VerticalAlignment="Center"/>
+                                                        </materialDesign:PopupBox.ToggleContent>
+                                                        <ScrollViewer Height="300" Width="250" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+                                                            <ItemsControl ItemsSource="{Binding LayerList}">
+                                                                <ItemsControl.ItemTemplate>
+                                                                    <DataTemplate x:Name="Test" >
+                                                                        <StackPanel Orientation="Horizontal">
+                                                                            <CheckBox Margin="5" IsChecked="{Binding IsChecked}"/>
+                                                                            <TextBlock Margin="5" Text="{Binding LayerName}"/>
+                                                                        </StackPanel>
+                                                                    </DataTemplate>
+                                                                </ItemsControl.ItemTemplate>
+                                                            </ItemsControl>
+                                                        </ScrollViewer>
+                                                    </materialDesign:PopupBox>
+                                                </StackPanel>
+                                                <StackPanel Grid.Row="1"  HorizontalAlignment="Center" Grid.ColumnSpan="2"
+                                                            VerticalAlignment="Center" Orientation="Horizontal">
+                                                    <TextBlock Text="Select Family Type" Margin="10" FontSize="20"/>
+                                                    <ComboBox Margin="10" IsTextSearchEnabled="True" IsTextSearchCaseSensitive="False" ItemsSource="{Binding ItemsView}" DisplayMemberPath="Name" 
+                                                    SelectedItem="{Binding SelectedFixtureType}"  
+                                                      Width="200"  VerticalAlignment="Top" >
+                                                        <ComboBox.GroupStyle>
+                                                            <GroupStyle>
+                                                                <GroupStyle.HeaderTemplate>
+                                                                    <DataTemplate>
+                                                                        <TextBlock Margin="10" Style="{DynamicResource MaterialDesignSubtitle2TextBlock}" FontSize="15" FontWeight="DemiBold" Text="{Binding Name}"/>
+                                                                    </DataTemplate>
+                                                                </GroupStyle.HeaderTemplate>
+                                                            </GroupStyle>
+                                                        </ComboBox.GroupStyle>
+                                                        <ComboBox.ItemTemplate>
+                                                            <DataTemplate>
+                                                                <TextBlock Text="{Binding Name}"/>
+                                                            </DataTemplate>
+                                                        </ComboBox.ItemTemplate>
+                                                    </ComboBox>
+                                                </StackPanel>
+                                                <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                                    <Button Margin="10"  Command="{Binding CreateFixturesCommand}"
+                                                             Width="200" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                                        <StackPanel Orientation="Horizontal">
+                                                            <TextBlock Text="Create Fixtures" FontSize="17" TextAlignment="Center" Foreground="White"/>
+                                                            <!--<materialDesign:PackIcon Kind="LightbulbOn" Margin="10,0,0,0"/>-->
+                                                        </StackPanel>
+                                                    </Button>
+                                                    <Button Margin="20,0,0,0"   Width="150" HorizontalAlignment="Center" Command="{Binding CancelCommand}">
+                                                        <StackPanel Orientation="Horizontal">
+                                                            <TextBlock Text="Cancel" FontSize="17" TextAlignment="Center" Foreground="White"/>
+                                                            <!--<materialDesign:PackIcon Kind="Cancel" Margin="10,0,0,0"/>-->
+                                                        </StackPanel>
+                                                    </Button>
+                                                </StackPanel>
+                                            </Grid>
+                                        </materialDesign:DialogHost>
+                                    </Grid>
+                                </Border>
+                            </DockPanel>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+    </Window.Resources>
+
+    <WindowChrome.WindowChrome>
+        <WindowChrome CaptionHeight="35"
+                       CornerRadius="0"
+                      ResizeBorderThickness="5"
+                      GlassFrameThickness="0"/>
+
+    </WindowChrome.WindowChrome>
+</Window>

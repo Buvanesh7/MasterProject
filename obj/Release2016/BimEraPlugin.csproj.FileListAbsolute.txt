@@ -1,0 +1,14 @@
+C:\Users\Akriyas\source\repos\BimEraAddIn\BimEraAddIn\obj\Release2016\BimEraPlugin.csprojAssemblyReference.cache
+C:\Users\Akriyas\source\repos\BimEraAddIn\BimEraAddIn\obj\Release2016\Views\CadToLinesWindow.g.cs
+C:\Users\Akriyas\source\repos\BimEraAddIn\BimEraAddIn\obj\Release2016\Views\FlagClashWindow.g.cs
+C:\Users\Akriyas\source\repos\BimEraAddIn\BimEraAddIn\obj\Release2016\Views\ClashToViewsWindow.g.cs
+C:\Users\Akriyas\source\repos\BimEraAddIn\BimEraAddIn\obj\Release2016\Views\CreateFixturesWindow.g.cs
+C:\Users\Akriyas\source\repos\BimEraAddIn\BimEraAddIn\obj\Release2016\Views\HideLinkedCategoriesWindow.g.cs
+C:\Users\Akriyas\source\repos\BimEraAddIn\BimEraAddIn\obj\Release2016\Views\RoomsToViewsWindow.g.cs
+C:\Users\Akriyas\source\repos\BimEraAddIn\BimEraAddIn\obj\Release2016\Views\RoomToSolidWindow.g.cs
+C:\Users\Akriyas\source\repos\BimEraAddIn\BimEraAddIn\obj\Release2016\Views\ShowOrphanedElementsWindow.g.cs
+C:\Users\Akriyas\source\repos\BimEraAddIn\BimEraAddIn\obj\Release2016\Views\SnoopLinkedElementWindow.g.cs
+C:\Users\Akriyas\source\repos\BimEraAddIn\BimEraAddIn\obj\Release2016\Views\UpdateWsStatusInfoWindow.g.cs
+C:\Users\Akriyas\source\repos\BimEraAddIn\BimEraAddIn\obj\Release2016\GeneratedInternalTypeHelper.g.cs
+C:\Users\Akriyas\source\repos\BimEraAddIn\BimEraAddIn\obj\Release2016\BimEraPlugin_MarkupCompile.cache
+C:\Users\Akriyas\source\repos\BimEraAddIn\BimEraAddIn\obj\Release2016\BimEraPlugin_MarkupCompile.lref

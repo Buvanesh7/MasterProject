@@ -1,0 +1,6 @@
+C:\Users\Akriyas\source\repos\AkryazTools\AkryazTools\obj\Debug2016\AkryazTools.csprojAssemblyReference.cache
+C:\Users\Akriyas\source\repos\AkryazTools\AkryazTools\obj\Debug2016\App.g.cs
+C:\Users\Akriyas\source\repos\AkryazTools\AkryazTools\obj\Debug2016\Views\CreateSmokeDetectorsWindow.g.cs
+C:\Users\Akriyas\source\repos\AkryazTools\AkryazTools\obj\Debug2016\GeneratedInternalTypeHelper.g.cs
+C:\Users\Akriyas\source\repos\AkryazTools\AkryazTools\obj\Debug2016\AkryazTools_MarkupCompile.cache
+C:\Users\Akriyas\source\repos\AkryazTools\AkryazTools\obj\Debug2016\AkryazTools_MarkupCompile.lref

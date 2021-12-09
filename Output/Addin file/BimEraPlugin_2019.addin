@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+  <AddIn Type="Application">
+    <Name>BimEra Plugin</Name>
+    <Assembly>C:\Program Files (x86)\BimEra Plugin\2019\BimEraPlugin.dll</Assembly>
+    <FullClassName>BimEraPlugin.Main</FullClassName>
+    <ClientId>b699eb0b-987f-46d6-badf-380ad5251e9a</ClientId>
+    <VendorId>BimEra</VendorId>
+    <Publisher>BimEra</Publisher>
+    <VendorDescription>BimEra, AddIn Developer</VendorDescription>
+  </AddIn>
+</RevitAddIns>
+
+

@@ -1,0 +1,5 @@
+D:\BIMEra.SampleProject\Sample.RevitCore\obj\Debug2016\Sample.RevitCore.csprojAssemblyReference.cache
+D:\BIMEra.SampleProject\Sample.RevitCore\obj\Debug2016\BIMEra.SampleProject.g.resources
+D:\BIMEra.SampleProject\Sample.RevitCore\obj\Debug2016\BIMEra.SampleProject.Properties.Resources.resources
+D:\BIMEra.SampleProject\Sample.RevitCore\obj\Debug2016\Sample.RevitCore.csproj.GenerateResource.cache
+D:\BIMEra.SampleProject\Sample.RevitCore\obj\Debug2016\Sample.RevitCore.csproj.CoreCompileInputs.cache

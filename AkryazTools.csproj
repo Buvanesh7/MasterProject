@@ -1,0 +1,723 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C1E851A9-DD02-45B8-A87D-6553498D0526}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AkryazTools</RootNamespace>
+    <AssemblyName>AkryazTools</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug2016' Or '$(Configuration)' == 'Release2016'">
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug2017' Or '$(Configuration)' == 'Release2017'">
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug2018' Or '$(Configuration)' == 'Release2018'">
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug2019' Or '$(Configuration)' == 'Release2019'">
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug2020' Or '$(Configuration)' == 'Release2020'">
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug2021' Or '$(Configuration)' == 'Release2021'">
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug2016|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <OutputPath>bin\Debug2016\</OutputPath>
+    <DefineConstants>TRACE;Revit2016;DEBUG2016</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug2017|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <OutputPath>bin\Debug2017\</OutputPath>
+    <DefineConstants>TRACE;Revit2017;DEBUG2017</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug2018|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <OutputPath>bin\Debug2018\</OutputPath>
+    <DefineConstants>TRACE;Revit2018;DEBUG2018</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug2019|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <OutputPath>bin\Debug2019\</OutputPath>
+    <DefineConstants>TRACE;Revit2019;DEBUG2019</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug2020|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <OutputPath>bin\Debug2020\</OutputPath>
+    <DefineConstants>TRACE;Revit2020;DEBUG2020</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug2021|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <OutputPath>bin\Debug2021\</OutputPath>
+    <DefineConstants>TRACE;Revit2021;DEBUG2021</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release2016|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release2016\</OutputPath>
+    <DefineConstants>TRACE;Revit2016;RELEASE2016</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release2017|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release2017\</OutputPath>
+    <DefineConstants>TRACE;Revit2017;RELEASE2017</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release2018|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release2018\</OutputPath>
+    <DefineConstants>TRACE;Revit2018;RELEASE2018</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release2019|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release2019\</OutputPath>
+    <DefineConstants>TRACE;Revit2019;RELEASE2019</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release2020|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release2020\</OutputPath>
+    <DefineConstants>TRACE;Revit2020;RELEASE2020</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release2021|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release2021\</OutputPath>
+    <DefineConstants>TRACE;Revit2021;RELEASE2021</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>
+			None
+		</ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommonServiceLocator, Version=2.0.2.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.2.0.2\lib\net47\CommonServiceLocator.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus, Version=5.5.3.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.5.5.3\lib\net45\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight, Version=5.4.1.0, Culture=neutral, PublicKeyToken=e7570ab207bcb616, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.4.1.1\lib\net45\GalaSoft.MvvmLight.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Extras, Version=5.4.1.0, Culture=neutral, PublicKeyToken=669f0b5e8f868abf, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.4.1.1\lib\net45\GalaSoft.MvvmLight.Extras.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Platform, Version=5.4.1.0, Culture=neutral, PublicKeyToken=5f873c45e98af8a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.4.1.1\lib\net45\GalaSoft.MvvmLight.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignColors, Version=2.0.4.3, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignColors.2.0.4\lib\net452\MaterialDesignColors.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=4.3.0.3, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignThemes.4.3.0\lib\net452\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Interactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Windows.Interactivity.WPF.2.0.20525\lib\net40\Microsoft.Expression.Interactions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IO.RecyclableMemoryStream, Version=1.3.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IO.RecyclableMemoryStream.1.3.6\lib\net46\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.4.7.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO" />
+    <Reference Include="System.Linq.Expressions" />
+    <Reference Include="System.Runtime" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Threading.Tasks" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.4.1.1\lib\net45\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Presentation" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)' == 'Debug2016' Or '$(Configuration)' == 'Release2016'">
+    <Reference Include="AdWindows">
+      <HintPath>$(ProgramW6432)\Autodesk\Revit 2016\AdWindows.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RevitAPI">
+      <HintPath>$(ProgramW6432)\Autodesk\Revit 2016\RevitAPI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RevitAPIUI">
+      <HintPath>$(ProgramW6432)\Autodesk\Revit 2016\RevitAPIUI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)' == 'Debug2017' Or '$(Configuration)' == 'Release2017'">
+    <Reference Include="AdWindows">
+      <HintPath>$(ProgramW6432)\Autodesk\Revit 2017\AdWindows.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RevitAPI">
+      <HintPath>$(ProgramW6432)\Autodesk\Revit 2017\RevitAPI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RevitAPIUI">
+      <HintPath>$(ProgramW6432)\Autodesk\Revit 2017\RevitAPIUI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)' == 'Debug2018' Or '$(Configuration)' == 'Release2018'">
+    <Reference Include="AdWindows">
+      <HintPath>$(ProgramW6432)\Autodesk\Revit 2018\AdWindows.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RevitAPI">
+      <HintPath>$(ProgramW6432)\Autodesk\Revit 2018\RevitAPI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RevitAPIUI">
+      <HintPath>$(ProgramW6432)\Autodesk\Revit 2018\RevitAPIUI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)' == 'Debug2019' Or '$(Configuration)' == 'Release2019'">
+    <Reference Include="AdWindows">
+      <HintPath>$(ProgramW6432)\Autodesk\Revit 2019\AdWindows.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RevitAPI">
+      <HintPath>$(ProgramW6432)\Autodesk\Revit 2019\RevitAPI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RevitAPIUI">
+      <HintPath>$(ProgramW6432)\Autodesk\Revit 2019\RevitAPIUI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)' == 'Debug2020' Or '$(Configuration)' == 'Release2020'">
+    <Reference Include="AdWindows">
+      <HintPath>$(ProgramW6432)\Autodesk\Revit 2020\AdWindows.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RevitAPI">
+      <HintPath>$(ProgramW6432)\Autodesk\Revit 2020\RevitAPI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RevitAPIUI">
+      <HintPath>$(ProgramW6432)\Autodesk\Revit 2020\RevitAPIUI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)' == 'Debug2021' Or '$(Configuration)' == 'Release2021'">
+    <Reference Include="AdWindows">
+      <HintPath>$(ProgramW6432)\Autodesk\Revit 2021\AdWindows.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RevitAPI">
+      <HintPath>$(ProgramW6432)\Autodesk\Revit 2021\RevitAPI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RevitAPIUI">
+      <HintPath>$(ProgramW6432)\Autodesk\Revit 2021\RevitAPIUI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)' == 'Debug2020' Or '$(Configuration)' == 'Release2020'">
+    <Reference Include="RevitAPI">
+      <HintPath>$(ProgramW6432)\Autodesk\Revit 2020\RevitAPI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RevitAPIUI">
+      <HintPath>$(ProgramW6432)\Autodesk\Revit 2020\RevitAPIUI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)' == 'Debug2021' Or '$(Configuration)' == 'Release2021'">
+    <Reference Include="RevitAPI">
+      <HintPath>$(ProgramW6432)\Autodesk\Revit 2021\RevitAPI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RevitAPIUI">
+      <HintPath>$(ProgramW6432)\Autodesk\Revit 2021\RevitAPIUI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyResolvers\AssemblyResolver.cs" />
+    <Compile Include="Converters\ColorToBrushConverter.cs" />
+    <Compile Include="Converters\StringToIntegerConverter.cs" />
+    <Compile Include="Enum\MepReRouterEnum.cs" />
+    <Compile Include="Enum\FilterRuleEnum.cs" />
+    <Compile Include="External Events\PipeUpDownExternalEvent.cs" />
+    <Compile Include="External Events\TestExternalEvent.cs" />
+    <Compile Include="ExternalCommands\TestCommand.cs" />
+    <Compile Include="ExternalCommands\PipeUpDownCommand.cs" />
+    <Compile Include="ExternalCommands\SyncViewsCommand.cs" />
+    <Compile Include="ExternalCommands\Orient3dViewCommand.cs" />
+    <Compile Include="ExternalCommands\SetRoomDataToElementsCommand.cs" />
+    <Compile Include="ExternalCommands\FlagCalshCommand.cs" />
+    <Compile Include="ExternalCommands\RoomToSloidCommand.cs" />
+    <Compile Include="ExternalCommands\HideLinkedCategoriesCommand.cs" />
+    <Compile Include="ExternalCommands\RoomToViewsCommand.cs" />
+    <Compile Include="ExternalCommands\Availability.cs" />
+    <Compile Include="ExternalCommands\LinklessCommand.cs" />
+    <Compile Include="ExternalCommands\ContactUsCommand.cs" />
+    <Compile Include="ExternalCommands\SnoopLinkedElementCommand.cs" />
+    <Compile Include="ExternalCommands\ClashToViewsCommand.cs" />
+    <Compile Include="ExternalCommands\CadTolinesCommand.cs" />
+    <Compile Include="ExternalCommands\CreateFixturesCommand.cs" />
+    <Compile Include="ExternalCommands\01-Template.cs" />
+    <Compile Include="ExternalCommands\ExportElectricalPanelSchedule.cs" />
+    <Compile Include="ExternalCommands\ExportScheduleCommand.cs" />
+    <Compile Include="ExternalCommands\ShowOrphanedElementsCommand.cs" />
+    <Compile Include="ExternalCommands\UpdateWsStatusInfo.cs" />
+    <Compile Include="ExternalCommands\UpgradeModelCommand.cs" />
+    <Compile Include="Helpers\BoundingBoxHelper.cs" />
+    <Compile Include="Helpers\ConstantMembers.cs" />
+    <Compile Include="Helpers\DisplayHelper.cs" />
+    <Compile Include="Helpers\FilterHelper.cs" />
+    <Compile Include="Helpers\FolderDialogHandler.cs" />
+    <Compile Include="Helpers\ParameterHelper.cs" />
+    <Compile Include="Helpers\PressKeyHelper.cs" />
+    <Compile Include="Helpers\RevitUiHelper.cs" />
+    <Compile Include="Helpers\RoomSelector.cs" />
+    <Compile Include="Helpers\SharedParameterHelper.cs" />
+    <Compile Include="Helpers\UnitConversionHelper.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="Models\ClashToViewsModel.cs" />
+    <Compile Include="Models\PipeUpDownData.cs" />
+    <Compile Include="Models\CreateFixtureData.cs" />
+    <Compile Include="Models\HideLinkedCategoriesModel.cs" />
+    <Compile Include="Models\ImportedCadFilesModel.cs" />
+    <Compile Include="Models\CreateDetailLinesData.cs" />
+    <Compile Include="Models\RoomToViewsData.cs" />
+    <Compile Include="Models\ShowOrphanedElementsData.cs" />
+    <Compile Include="Models\SnoopLinkedElementModel.cs" />
+    <Compile Include="Models\UpdateWsStatusInfoModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Messages\CloseMessage.cs" />
+    <Compile Include="Types\TaskDialogType.cs" />
+    <Compile Include="ViewModels\CadLayersViewModel.cs" />
+    <Compile Include="ViewModels\PipeUpDownViewModel.cs" />
+    <Compile Include="ViewModels\CategoryPickerViewModel.cs" />
+    <Compile Include="ViewModels\CadToLinesViewModel.cs" />
+    <Compile Include="ViewModels\FlagClashVieModel.cs" />
+    <Compile Include="ViewModels\ClashToViewsViewModel.cs" />
+    <Compile Include="ViewModels\CreateFixturesViewModel.cs" />
+    <Compile Include="ViewModels\HideLinkedCategoriesViewModel.cs" />
+    <Compile Include="ViewModels\RoomsDataViewModel.cs" />
+    <Compile Include="ViewModels\RoomsToViewViewModel.cs" />
+    <Compile Include="ViewModels\RoomToSolidViewModel.cs" />
+    <Compile Include="ViewModels\ShowOrphanedElementsViewModel.cs" />
+    <Compile Include="ViewModels\SnoopLinkedElementViewModel.cs" />
+    <Compile Include="ViewModels\TestViewModel.cs" />
+    <Compile Include="ViewModels\UpdateWsInfoViewModel.cs" />
+    <Compile Include="Views\CadToLinesWindow.xaml.cs">
+      <DependentUpon>CadToLinesWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FlagClashWindow.xaml.cs">
+      <DependentUpon>FlagClashWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ClashToViewsWindow.xaml.cs">
+      <DependentUpon>ClashToViewsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CreateFixturesWindow.xaml.cs">
+      <DependentUpon>CreateFixturesWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HideLinkedCategoriesWindow.xaml.cs">
+      <DependentUpon>HideLinkedCategoriesWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PipeUpDownWindow.xaml.cs">
+      <DependentUpon>PipeUpDownWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RoomsToViewsWindow.xaml.cs">
+      <DependentUpon>RoomsToViewsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RoomToSolidWindow.xaml.cs">
+      <DependentUpon>RoomToSolidWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ShowOrphanedElementsWindow.xaml.cs">
+      <DependentUpon>ShowOrphanedElementsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SnoopLinkedElementWindow.xaml.cs">
+      <DependentUpon>SnoopLinkedElementWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TestWindow.xaml.cs">
+      <DependentUpon>TestWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UpdateWsStatusInfoWindow.xaml.cs">
+      <DependentUpon>UpdateWsStatusInfoWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WindowHandle\JtWindowHandle.cs" />
+    <Compile Include="WindowHandle\WindowHandler.cs" />
+    <Compile Include="Wrappers\SetElementColorWrapper.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="..\.editorconfig">
+      <Link>.editorconfig</Link>
+    </None>
+    <None Include="Addin\AkryazTools.addin" />
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Views\CadToLinesWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\FlagClashWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ClashToViewsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CreateFixturesWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\HideLinkedCategoriesWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PipeUpDownWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RoomsToViewsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RoomToSolidWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ShowOrphanedElementsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SnoopLinkedElementWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TestWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UpdateWsStatusInfoWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\dwg_16x16.png" />
+    <Resource Include="Resources\Icons\dwg_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons\CadToFixture_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons\CadToFixture_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons\ExportExcel_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons\ExportExcel_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons\Orphaned-Elements_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons\Orphaned-Elements_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons\Upgrade-Icon_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons\Upgrade-Icon_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons\CAD-to-Revit-Lines_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons\CAD-to-Revit-Lines_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons\Panel-Schedule_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons\Panel-Schedule_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons\Who-is-Owner_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons\Who-is-Owner_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons\Clash-to-Views_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons\Clash-to-Views_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons\icon_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons\icon_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons\Investigate_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons\Investigate_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons\CAD-to-Fixtures_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons\CAD-to-Fixtures_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons\LinkLess_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons\LinkLess_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons\Rooms to 3D Views_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons\Rooms to 3D Views_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons\Off-LinkedGrids_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons\Off-LinkedGrids_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons\Room-to-Mass_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons\Room-to-Mass_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons\Flag-at-Clash_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons\Flag-at-Clash_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons\Rooms-to-Mass_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons\Rooms-to-Mass_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons\Set-Room-Info-to-Elements_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons\Set-Room-Info-to-Elements_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons\RoateSectionBox_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons\RoateSectionBox_64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons\SyncViews_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons\SyncViews_64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons\RoateSectionBox_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons\SyncViews_16x4png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons\SyncViews_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons\PipeUpDown_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons\PipeUpDown_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons\WIP_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons\WIP_32x32.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+      echo Configuration: $(Configuration)
+
+      SET PLUGINNAME=AkryazTools
+      SET ROOTFOLDER=%25ProgramData%25
+      SET PLUGINVERSION=$(Configuration)
+      SET PLUGINVERSION=%25PLUGINVERSION:Debug=%25
+      SET PLUGINVERSION=%25PLUGINVERSION:Release=%25
+
+      SET PARENTFOLDER=%25ROOTFOLDER%25\Autodesk\Revit\Addins\%25PLUGINVERSION%25
+      SET PLUGINFOLDER=%25PARENTFOLDER%25\%25PLUGINNAME%25
+
+      echo Copying results to %25PLUGINVERSION%25
+      if not exist  "%25PLUGINFOLDER%25" mkdir "%25PLUGINFOLDER%25"
+      copy "$(ProjectDir)$(OutDir)*.dll"  "%25PLUGINFOLDER%25"
+      copy "$(ProjectDir)$(OutDir)*.pdb"  "%25PLUGINFOLDER%25"
+      copy "$(ProjectDir)$(OutDir)*.exe"  "%25PLUGINFOLDER%25"
+
+      copy "$(ProjectDir)Addin\*.addin" "%25PARENTFOLDER%25"
+</PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <Import Project="..\packages\MaterialDesignThemes.4.3.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.3.0\build\MaterialDesignThemes.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\MaterialDesignThemes.4.3.0\build\MaterialDesignThemes.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MaterialDesignThemes.4.3.0\build\MaterialDesignThemes.targets'))" />
+  </Target>
+  <!--<Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('C:\Users\Akriyas\source\repos\SampleProject\packages\MaterialDesignThemes.3.2.0\build\MaterialDesignThemes.targets')" Text="$([System.String]::Format('$(ErrorText)', 'C:\Users\Akriyas\source\repos\SampleProject\packages\MaterialDesignThemes.3.2.0\build\MaterialDesignThemes.targets'))" />
+    <Error Condition="!Exists('..\packages\MaterialDesignThemes.4.3.0\build\MaterialDesignThemes.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MaterialDesignThemes.4.3.0\build\MaterialDesignThemes.targets'))" />
+  </Target>
+  <Import Project="C:\Users\Akriyas\source\repos\SampleProject\packages\MaterialDesignThemes.3.2.0\build\MaterialDesignThemes.targets" Condition="Exists('C:\Users\Akriyas\source\repos\SampleProject\packages\MaterialDesignThemes.3.2.0\build\MaterialDesignThemes.targets')" />
+  <Import Project="..\packages\MaterialDesignThemes.4.3.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.3.0\build\MaterialDesignThemes.targets')" />-->
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
